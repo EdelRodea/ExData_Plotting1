@@ -7,7 +7,7 @@ day_1 = which(epc$Date == "1/2/2007")
 day_2 = which(epc$Date == "2/2/2007")
 subdata = epc[c(day_1, day_2), ]
 
-#plot4
+#plot4 (The four in one graph that shows Global Active Power, Voltage, Energy sub mettiing, and Gloabal reactive power throw time)
 png(filename= "plot4.png", width = 480, height = 480)
 par(mfrow= c(2,2))
 #fig1
