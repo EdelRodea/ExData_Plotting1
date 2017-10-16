@@ -7,7 +7,7 @@ day_1 = which(epc$Date == "1/2/2007")
 day_2 = which(epc$Date == "2/2/2007")
 subdata = epc[c(day_1, day_2), ]
 
-#plot2
+#plot2 (The graph of the global active power in kilowatts shows a periodic behavior)
 png(filename= "plot2.png", width = 480, height = 480)
 plot(as.numeric(as.character(subdata$Global_active_power)), type= "l", main = "", xlab = "", ylab = "")
 title(ylab= "Global Active Power (kilowatts)")
