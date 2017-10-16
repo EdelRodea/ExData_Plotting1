@@ -7,7 +7,7 @@ day_1 = which(epc$Date == "1/2/2007")
 day_2 = which(epc$Date == "2/2/2007")
 subdata = epc[c(day_1, day_2), ]
 
-#plot3
+#plot3 (The graph shows the periodical behavior of the energy submeeting, higher in submetting 1 and lower un submetting 2)
 png(filename= "plot3.png", width = 480, height = 480)
 plot(as.numeric(as.character(subdata$Sub_metering_1)), type= "l", main = "", xlab = "", ylab = "")
 lines(as.numeric(as.character(subdata$Sub_metering_2)), type= "l", col= "red")
