@@ -7,7 +7,7 @@ day_1 = which(epc$Date == "1/2/2007")
 day_2 = which(epc$Date == "2/2/2007")
 subdata = epc[c(day_1, day_2), ]
 
-#plot1
+#plot1 (The histogram of the global active power in kilowatts it shows a left skewed distribution)
 png(filename= "plot1.png", width = 480, height = 480)
 hist(as.numeric(as.character(subdata$Global_active_power)), col= "red", main = "", xlab = "")
 title("Global Active Power", xlab= "Global Active Power (kilowatts)")
