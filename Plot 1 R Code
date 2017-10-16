@@ -1,0 +1,14 @@
+epc<- read.table(file="household_power_consumption.txt", header = TRUE, sep = ";")
+head(epc)
+dim(epc)
+
+#Data from 2007-02-01 and 2007-02-02
+day_1 = which(epc$Date == "1/2/2007")
+day_2 = which(epc$Date == "2/2/2007")
+subdata = epc[c(day_1, day_2), ]
+
+#plot1
+png(filename= "plot1.png", width = 480, height = 480)
+hist(as.numeric(as.character(subdata$Global_active_power)), col= "red", main = "", xlab = "")
+title("Global Active Power", xlab= "Global Active Power (kilowatts)")
+dev.off()
